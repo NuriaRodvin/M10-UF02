@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- Menú padre EcoDelivery -->
+    <menuitem 
+        id="ecodelivery_menu" 
+        name="EcoDelivery" 
+        sequence="10"
+        web_icon="ecodelivery,static/src/img/icon.png"/>
+    
+    <!-- Submenú: Transportes Eco -->
+    <menuitem 
+        id="menu_transporte_eco" 
+        name="Transportes Eco" 
+        parent="ecodelivery_menu" 
+        action="transporte_eco_action"
+        sequence="10"/>
+    
+    <!-- Submenú: Envíos Eco -->
+    <menuitem 
+        id="menu_envio_eco" 
+        name="Envíos Eco" 
+        parent="ecodelivery_menu" 
+        action="envio_eco_action"
+        sequence="20"/>
+  </data>
+</odoo>

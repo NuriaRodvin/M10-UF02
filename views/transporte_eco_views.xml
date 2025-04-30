@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Tree TransporteEco -->
+    <record id="transporte_eco_tree_view" model="ir.ui.view">
+        <field name="name">transporte.eco.tree</field>
+        <field name="model">transporte.eco</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="transporte"/>
+                <field name="envio_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form TransporteEco -->
+    <record id="transporte_eco_form_view" model="ir.ui.view">
+        <field name="name">transporte.eco.form</field>
+        <field name="model">transporte.eco</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="transporte"/>
+                        <field name="descripcion"/>
+                    </group>
+                    <field name="envio_ids" widget="many2many_tags"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para TransporteEco -->
+    <record id="transporte_eco_action" model="ir.actions.act_window">
+        <field name="name">Transportes Eco</field>
+        <field name="res_model">transporte.eco</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

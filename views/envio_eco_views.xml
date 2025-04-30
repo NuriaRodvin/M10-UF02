@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Tree EnvioEco -->
+    <record id="envio_eco_tree_view" model="ir.ui.view">
+        <field name="name">envio.eco.tree</field>
+        <field name="model">envio.eco</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="pedido_id"/>
+                <field name="direccion_entrega"/>
+                <field name="estado"/>
+                <field name="fecha_entrega_prevista"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form EnvioEco -->
+    <record id="envio_eco_form_view" model="ir.ui.view">
+        <field name="name">envio.eco.form</field>
+        <field name="model">envio.eco</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="pedido_id"/>
+                        <field name="direccion_entrega"/>
+                        <field name="transporte_id"/>
+                        <field name="fecha_solicitud"/>
+                        <field name="fecha_entrega_prevista"/>
+                        <field name="estado"/>
+                        <field name="fecha_entrega"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para EnvioEco -->
+    <record id="envio_eco_action" model="ir.actions.act_window">
+        <field name="name">Envíos Eco</field>
+        <field name="res_model">envio.eco</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
